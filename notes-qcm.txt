@@ -1,0 +1,13 @@
+
+
+Résultats aux QCM de début de TD NFP121 de Loris CARO :
+
+* QCM classes   : 18,0  (min 06,0 ; moyenne 12,7 ; max 18,0)
+* QCM heritage  : 18,0  (min 03,0 ; moyenne 09,6 ; max 18,0)
+* QCM interface : 12,0  (min 08,0 ; moyenne 11,1 ; max 16,0)
+
+Moyenne : 18,0  (min 05,5 ; moyenne 12,0 ; max 18,0)
+
+La note la plus faible est ignorée.
+Entre parenthèses, les statiques sur la promo pour cette note.
+
