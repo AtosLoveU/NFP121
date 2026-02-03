@@ -1,3 +1,25 @@
-Date de l'évaluation : lun. 26 janv. 2026 20:51:47 CET
+Date de l'évaluation : mar. 03 févr. 2026 21:43:57 CET
 
-Pas de mise à jour sur le Gitlab ! (git push manquant ?)
+Compilation de Cercle.java : OK.
+
+Types d'erreurs checkstyle : 2	(voir evaluation1/Cercle.checkstyle)
+
+Résultat de recherche de similitudes sur Cercle.java dans evaluation1/Cercle.sim
+
+JavaDoc automatique de Cercle : KO	(voir evaluation1/Cercle.javadoc)
+
+Un constructeur devrait appeler l'autre.
+
+Test SujetCercleTest : OK (14 tests)	(voir evaluation1/SujetCercleTest.txt)
+Test RobustesseCercleTest : OK (20 tests)	(voir evaluation1/RobustesseCercleTest.txt)
+Test FormeCercleTest : OK (12 tests)	(voir evaluation1/FormeCercleTest.txt)
+Test Forme2CercleTest : OK (9 tests)	(voir evaluation1/Forme2CercleTest.txt)
+
+ComplementsCercleTest : modifiée... on l'utilise donc...
+Compilation de ComplementsCercleTest.java : OK.
+Test ComplementsCercleTest : OK (14 tests)	(voir evaluation1/ComplementsCercleTest.txt)
+
+Compilation de CercleTest.java : OK.
+Test CercleTest : OK (13 tests)	(voir evaluation1/CercleTest.txt)
+Test de CercleTest avec CercleMini : ERREUR : CercleTest aurait dû réussir !	(voir evaluation1/CercleMini.txt pour les erreurs signalées)
+CercleTest échoue sur CercleMini : les mutants ne sont pas testés
