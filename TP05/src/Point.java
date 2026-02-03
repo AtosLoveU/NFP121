@@ -1,4 +1,5 @@
 import java.awt.Color;
+import afficheur.Ecran;
 
 /** Point modélise un point géométrique dans un plan équipé d'un
  * repère cartésien.  Un point peut être affiché et translaté.
@@ -86,6 +87,10 @@ public class Point {
 	  */
 	public void setCouleur(Color nouvelleCouleur) {
 		this.couleur = nouvelleCouleur;
+	}
+	
+	public void dessiner(Ecran ecran, int x, int y, Color couleur) {
+		ecran.dessinerPoint(x, y, couleur);
 	}
 
 }

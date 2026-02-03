@@ -1,5 +1,5 @@
-Nom       : 
-Prénom    : 
+Nom       : Caro
+Prénom    : Loris
 Groupe TP : 
 
 
@@ -8,7 +8,7 @@ Consigne :  Ci-dessous, répondre à la place des « ... ».
 
 =====[ Temps ]==================================================================
 
-Temps passé sur la V1 : ... heures ... minutes
+Temps passé sur la V1 : 1 heures 30 minutes
 Temps passé sur la V2 : ... heures ... minutes
 Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
 Bien sûr, les temps renseignés ici ne sont pas pris en compte dans la notation.
@@ -19,13 +19,13 @@ Bien sûr, les temps renseignés ici ne sont pas pris en compte dans la notation
 Indiquer la relation UML entre Cercle et le Point centre du cercle.
 -------------------------------------------------------------------
 
-...
+C'est une composition car un cercle est défini structurellement par son centre et son rayon (onc sans cercle, son centre n'a plus de raison d'exister)
 
 
 Comment est réalisée l'exigence E18 ?
 -------------------------------------
 
-...
+C'est réalisé grace a l'encapsulation
 
 
 

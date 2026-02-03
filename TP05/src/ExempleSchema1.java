@@ -1,3 +1,6 @@
+import java.awt.Color;
+
+import afficheur.Ecran;
 
 /** Construire le schéma proposé dans le sujet de TP avec des points,
   * et des segments.
@@ -13,8 +16,11 @@ public class ExempleSchema1 {
 	  */
 	public static void main(String[] args)
 	{
+		Ecran dessin = new Ecran("dessin", 600, 400, 20);
+		
 		// Créer les trois segments
 		Point p1 = new Point(3, 2);
+		p1.dessiner(dessin, 1, 2, Color.GREEN);
 		Point p2 = new Point(6, 9);
 		Point p3 = new Point(11, 4);
 		Segment s12 = new Segment(p1, p2);
