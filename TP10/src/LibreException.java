@@ -1,2 +1,4 @@
-public class LibreException {
+// Exception vérifiée
+public class LibreException extends Exception {
+    public LibreException(String message) { super(message); }
 }

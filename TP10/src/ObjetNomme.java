@@ -11,9 +11,12 @@ public abstract class ObjetNomme {
 	 * @param nom le nom de l'agenda
 	 * @throws IllegalArgumentException si nom n'a pas au moins un caractère
 	 */
-	public ObjetNomme(String nom) {
-		this.nom = nom;
-	}
+	public ObjetNomme(String nom) throws IllegalArgumentException{
+        if (nom == null || nom.length() < 1) {
+            throw new IllegalArgumentException(" 'nom' ne contient aucun caractère");
+        }
+        this.nom = nom;
+    }
 
 
 	/**
