@@ -1,0 +1,37 @@
+Date de l'évaluation : ven. 06 mars 2026 16:31:11 CET
+
+LISEZ-MOI.txt : NON MODIFIÉ
+
+Nombre de similitudes : 0	(voir evaluation1/sim_java.txt)
+
+Erreurs checkstyle (différentes/types) : 0/0	(voir evaluation1//checkstyle.txt)
+
+Classe OperationInterditeException : NON DÉFINIE (ou pas sur Gitlab)
+
+Procuration sur le jeu réel : Non identifiée
+
+OperationInterditeException : JAMAIS LEVÉE
+OperationInterditeException : JAMAIS RECUPÉRÉE
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Jouer.java:20:       } catch (ConfigurationException e) {
+
+Utilisation de 'Scanner' : NON
+
+Utilisation de 'split' : NON
+
+Utilisation de 'Random' : NON
+
+Utilisation de '3' : ok
+
+Affichage de 'Impossible !' : jamais affiché (ERREUR)
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Pas de fichier Arbitre.java sur Gitlab !
+Fichiers manquants sur Gitlab ? Un 'git push' oublié ?
