@@ -31,7 +31,11 @@ else
 fi
 
 # Positionner CLASSPATH
-export CLASSPATH=$src:$bin:${CLASSPATH:-.}
+case "$(uname -s)" in
+    CYGWIN*|MINGW*|MSYS*) SEP=";" ;;
+    *) SEP=":" ;;
+esac
+export CLASSPATH="$src${SEP}$bin${SEP}${CLASSPATH:-.}"
 
 # Déterminer si l'option -enconding latin1 est nécessaire
 javacOpt=

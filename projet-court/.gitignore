@@ -1,1 +1,4 @@
 /bin/
+*.diff
+*.computed
+*.class

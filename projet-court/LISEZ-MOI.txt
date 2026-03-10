@@ -68,5 +68,17 @@ Donner ici les explications supplémentaires utiles à la compréhension du
 travail rendu.
 --------------------------------------------------------------------------------
 
-
+J'ai dû modifier le testeur.sh qui ne semblait pas fonctionner (du moins sur mon pc)
+en changeant : 
+```
+export CLASSPATH=$src:$bin:${CLASSPATH:-.}
+```
+par : 
+```
+case "$(uname -s)" in
+    CYGWIN*|MINGW*|MSYS*) SEP=";" ;;
+    *) SEP=":" ;;
+esac
+export CLASSPATH="$src${SEP}$bin${SEP}${CLASSPATH:-.}"
+```
 --------------------------------------------------------------------------------

@@ -27,7 +27,7 @@ public class StrategieHumain implements Strategie {
                     // Ne devrait pas arriver avec logique correcte
                 }
                 System.out.println("[Une allumette en moins, plus que "
-                    + jeu.getNombreAllumettes() + ". chutt ]");
+                    + jeu.getNombreAllumettes() + ". Chut !]");
             } else {
                 System.out.println("Vous devez donner un entier.");
             }
