@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
-Nom       : 
-Prénom    : 
+Nom       : Caro
+Prénom    : Loris
 Groupe TP : 
 --------------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ prises en compte dans la notation du projet.
 Il faut remplacer les ... par des nombres.
 
 
-* Temps passé sur la V1 : ... heures ... minutes
+* Temps passé sur la V1 :  3 heures 30 minutes
 * Temps passé sur la V2 : ... heures ... minutes
 
 Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
@@ -29,7 +29,12 @@ Pourquoi l'exception OperationInterditeException ne peut pas être définie
 comme vérifiée par le compilateur ?
 --------------------------------------------------------------------------------
 
-...
+Une exception vérifiée oblige toutes les méthodes qui peuvent la lancer à la déclarer avec throws, mais 
+OperationInterditeException est lancée depuis Procuration.retirer(), qui est appelée indirectement depuis 
+Strategie.getPrise(Jeu jeu). Donc si on veut qu'elle soit vérifiée, il faudrait écrire 
+"int getPrise(Jeu jeu) throws OperationInterditeException;", ce qui forcerait tous les joueurs, meme non
+tricheur, a déclarer ou gérer cette exception ce qui violerait la contraite C19.
+Une stratégie honnête n'a pas à connaitre l'existence de la triche
 
 
 --------------------------------------------------------------------------------
@@ -38,16 +43,23 @@ exemple la stratégie lente (C13).  Pour plus de précision, on numérotera
 les étapes à faire.
 --------------------------------------------------------------------------------
 
-...
-
+1- Créer le fichier StrategieLente.java qui implémente Strategie et qui renvoie toujours 1
+2- Ajouter un cas dans la méthode creerStrategie() de Jouer.java (ex : case "lente": return new StrategieLente();)
+3- Mettre à jour afficherUsage() dans Jouer.java pour mentionner lente dans la liste des stratégies disponibles.
 
 --------------------------------------------------------------------------------
 Expliquer ce qui permet, dans votre conception, de changer dynamiquement
 (en cours d'exécution du programme) la stratégie d'un joueur (C14).
 --------------------------------------------------------------------------------
 
-...
-
+C'est le fait que Joueur ne contient pas une stratégie concrète directement, mais une référence vers l'interface Strategie
+Il suffit d'ajouter une méthode setStrategie dans Joueur :
+```
+public void setStrategie(Strategie strategie) {
+    this.strategie = strategie;
+}
+```
+Et à n'importe quel moment de la partie, on peut faire : joueur.setStrategie(new StrategieExpert());
 
 =====[ Explications ]===========================================================
 
@@ -56,6 +68,5 @@ Donner ici les explications supplémentaires utiles à la compréhension du
 travail rendu.
 --------------------------------------------------------------------------------
 
-...
 
 --------------------------------------------------------------------------------
