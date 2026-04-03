@@ -1,45 +1,17 @@
-File Cercle.java: 563 tokens, 114 lines (not NL-terminated)
-Total input: 1 file (1 new, 0 old), 563 tokens
+File Cercle.java: 525 tokens, 251 lines
+Total input: 1 file (1 new, 0 old), 525 tokens
 
-Cercle.java: line 30-34 [66]
-Cercle.java: line 44-48
-<         double centreX = (point1.getX() + point2.getX()) / 2.0;
-<         double centreY = (point1.getY() + point2.getY()) / 2.0;
-<         this.centre = new Point(centreX, centreY);
-<         this.rayon = point1.distance(point2) / 2.0;
-<         this.couleur = Color.blue;
----
->         double centreX = (point1.getX() + point2.getX()) / 2.0;
->         double centreY = (point1.getY() + point2.getY()) / 2.0;
->         this.centre = new Point(centreX, centreY);
->         this.rayon = point1.distance(point2) / 2.0;
->         this.couleur = couleurCercle;
-
-Cercle.java: line 25-30 [31]
-Cercle.java: line 52-57
-<     public Cercle(Point point1, Point point2) {
-<         assert point1 != null;
-<         assert point2 != null;
-<         assert point1.distance(point2) > 0;
-<         
-<         double centreX = (point1.getX() + point2.getX()) / 2.0;
+Cercle.java: line 56-60 [34]
+Cercle.java: line 124-128
+<     private static Point milieu(Point p1, Point p2) {
+<         assert p1 != null;
+<         assert p2 != null;
+<         assert p1.distance(p2) > 0;
+<         return new Point((p1.getX() + p2.getX()) / 2.0,
 ---
 >     public static Cercle creerCercle(Point centreCercle, Point pointCirconference) {
 >         assert centreCercle != null;
 >         assert pointCirconference != null;
 >         assert centreCercle.distance(pointCirconference) > 0;
->         
->         double rayonCalcule = centreCercle.distance(pointCirconference);
-
-Cercle.java: line 38-41 [25]
-Cercle.java: line 52-55
-<     public Cercle(Point point1, Point point2, Color couleurCercle) {
-<         assert point1 != null;
-<         assert point2 != null;
-<         assert point1.distance(point2) > 0;
----
->     public static Cercle creerCercle(Point centreCercle, Point pointCirconference) {
->         assert centreCercle != null;
->         assert pointCirconference != null;
->         assert centreCercle.distance(pointCirconference) > 0;
+>         return new Cercle(centreCercle, centreCercle.distance(pointCirconference));
 

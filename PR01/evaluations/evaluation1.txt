@@ -1,14 +1,12 @@
-Date de l'évaluation : mar. 03 févr. 2026 21:43:57 CET
+Date de l'évaluation : ven. 03 avril 2026 14:19:53 CEST
 
 Compilation de Cercle.java : OK.
 
-Types d'erreurs checkstyle : 2	(voir evaluation1/Cercle.checkstyle)
+Types d'erreurs checkstyle : 3	(voir evaluation1/Cercle.checkstyle)
 
 Résultat de recherche de similitudes sur Cercle.java dans evaluation1/Cercle.sim
 
-JavaDoc automatique de Cercle : KO	(voir evaluation1/Cercle.javadoc)
-
-Un constructeur devrait appeler l'autre.
+JavaDoc automatique de Cercle : ok
 
 Test SujetCercleTest : OK (14 tests)	(voir evaluation1/SujetCercleTest.txt)
 Test RobustesseCercleTest : OK (20 tests)	(voir evaluation1/RobustesseCercleTest.txt)
