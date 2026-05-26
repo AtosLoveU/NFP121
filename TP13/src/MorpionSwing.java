@@ -19,9 +19,9 @@ public class MorpionSwing {
 	private static final Map<ModeleMorpion.Etat, ImageIcon> images
 		= new HashMap<ModeleMorpion.Etat, ImageIcon>();
 	static {
-		images.put(ModeleMorpion.Etat.VIDE, new ImageIcon("blanc.jpg"));
-		images.put(ModeleMorpion.Etat.CROIX, new ImageIcon("croix.jpg"));
-		images.put(ModeleMorpion.Etat.ROND, new ImageIcon("rond.jpg"));
+		images.put(ModeleMorpion.Etat.VIDE,  new ImageIcon("../blanc.jpg"));
+		images.put(ModeleMorpion.Etat.CROIX, new ImageIcon("../croix.jpg"));
+		images.put(ModeleMorpion.Etat.ROND,  new ImageIcon("../rond.jpg"));
 	}
 
 // Choix de réalisation :
@@ -47,10 +47,12 @@ public class MorpionSwing {
 	private final JButton boutonNouvellePartie = new JButton("N");
 
 	/** Cases du jeu */
-	private final JLabel[][] cases = new JLabel[3][3];
+	private final JLabel[][] cases = new JLabel[ModeleMorpion.TAILLE][ModeleMorpion.TAILLE];
 
 	/** Zone qui indique le joueur qui doit jouer */
 	private final JLabel joueur = new JLabel();
+	
+	private final JMenuBar menu = new JMenuBar();
 
 
 // Le constructeur
@@ -70,6 +72,7 @@ public class MorpionSwing {
 		for (int i = 0; i < this.cases.length; i++) {
 			for (int j = 0; j < this.cases[i].length; j++) {
 				this.cases[i][j] = new JLabel();
+				this.cases[i][j].setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
 			}
 		}
 
@@ -81,13 +84,57 @@ public class MorpionSwing {
 		this.fenetre = new JFrame("Morpion");
 		this.fenetre.setLocation(100, 200);
 
+		Container contenu = this.fenetre.getContentPane();
+
+		JPanel panneauGrille = new JPanel(new GridLayout(ModeleMorpion.TAILLE, ModeleMorpion.TAILLE));
+		for (int j = 0; j < ModeleMorpion.TAILLE; j++) {
+			for (int i = 0; i < ModeleMorpion.TAILLE; i++) {
+				panneauGrille.add(this.cases[i][j]);
+			}
+		}
+		contenu.add(panneauGrille, BorderLayout.CENTER);
+
+		JPanel panneauCommandes = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5));
+		panneauCommandes.add(this.boutonNouvellePartie);
+		panneauCommandes.add(new JLabel("Joueur : "));
+		panneauCommandes.add(this.joueur);
+		panneauCommandes.add(this.boutonQuitter);
+		panneauCommandes.add(this.menu);
+		contenu.add(panneauCommandes, BorderLayout.SOUTH);
+
 		// Construire le contrôleur (gestion des événements)
 		this.fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		this.boutonQuitter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				modele.quitter();
+				System.exit(0);
+			}
+		});
+
+		this.boutonNouvellePartie.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				recommencer();
+			}
+		});
+
+		for (int i = 0; i < ModeleMorpion.TAILLE; i++) {
+			for (int j = 0; j < ModeleMorpion.TAILLE; j++) {
+				final int col = i;
+				final int lig = j;
+				this.cases[i][j].addMouseListener(new MouseAdapter() {
+					public void mouseClicked(MouseEvent e) {
+						jouerCase(col, lig);
+					}
+				});
+			}
+		}
 
 		// afficher la fenêtre
 		this.fenetre.pack();			// redimmensionner la fenêtre
 		this.fenetre.setVisible(true);	// l'afficher
 	}
+
 
 // Quelques réactions aux interactions de l'utilisateur
 // ----------------------------------------------------
@@ -100,13 +147,39 @@ public class MorpionSwing {
 		for (int i = 0; i < this.cases.length; i++) {
 			for (int j = 0; j < this.cases[i].length; j++) {
 				this.cases[i][j].setIcon(images.get(this.modele.getValeur(i, j)));
+				this.cases[i][j].revalidate();
+				this.cases[i][j].repaint();
 			}
 		}
 
 		// Mettre à jour le joueur
-		joueur.setIcon(images.get(modele.getJoueur()));
+		this.joueur.setIcon(images.get(modele.getJoueur()));
+		this.joueur.revalidate();
+		this.joueur.repaint();
 	}
 
+	/** Jouer dans la case (col, lig). */
+	private void jouerCase(int col, int lig) {
+		try {
+			this.modele.cocher(col, lig);
+			this.cases[col][lig].setIcon(images.get(this.modele.getValeur(col, lig)));
+			this.cases[col][lig].revalidate();
+			this.cases[col][lig].repaint();
+			this.joueur.setIcon(images.get(this.modele.getJoueur()));
+			this.joueur.revalidate();
+			this.joueur.repaint();
+			if (this.modele.estTerminee()) {
+				String message = this.modele.estGagnee()
+					? "Bravo ! Le joueur a gagné !"
+					: "Match nul !";
+				JOptionPane.showMessageDialog(this.fenetre, message,
+					"Fin de partie", JOptionPane.INFORMATION_MESSAGE);
+			}
+		} catch (CaseOccupeeException ex) {
+			JOptionPane.showMessageDialog(this.fenetre, ex.getMessage(),
+				"Case occupée", JOptionPane.WARNING_MESSAGE);
+		}
+	}
 
 
 // La méthode principale

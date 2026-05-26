@@ -57,19 +57,76 @@ public class LanceurIndependant {
 
 
 	private void testerUneClasse(String nomClasse)
-		throws ClassNotFoundException, InstantiationException,
-						  IllegalAccessException
+		throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException,
+						  InstantiationException, IllegalAccessException
 	{
 		// Récupérer la classe
+        Class<?> clazz = Class.forName(nomClasse);
 
 		// Récupérer les méthodes "preparer" et "nettoyer"
 		Method preparer = null;
 		Method nettoyer = null;
+		try {
+            preparer = clazz.getMethod("preparer");
+        } catch (NoSuchMethodException e) {
+            // Pas de méthode preparer : on laisse null
+        }
+        try {
+            nettoyer = clazz.getMethod("nettoyer");
+        } catch (NoSuchMethodException e) {
+            // Pas de méthode nettoyer : on laisse null
+        }
 
 		// Instancier l'objet qui sera le récepteur des tests
-		Object objet = null;
+        Object objet = clazz.getDeclaredConstructor().newInstance();
 
 		// Exécuter les méthods de test
+		for (Method m : clazz.getMethods()) {
+			// Une méthode de test est publique, d'instance (non static), sans paramètre, et son nom commence par "test"
+            if (m.getName().startsWith("test")
+                    && m.getParameterCount() == 0
+                    && !Modifier.isStatic(m.getModifiers())) {
+ 
+                this.nbTestsLances++;
+                try {
+                    // 1. Appeler preparer (si elle existe)
+                    if (preparer != null) {
+                        preparer.invoke(objet);
+                    }
+ 
+                    // 2. Exécuter le test
+                    m.invoke(objet);
+                    System.out.print(".");   // test réussi
+ 
+                } catch (InvocationTargetException e) {
+                    Throwable cause = e.getCause();
+                    if (cause instanceof Echec) {
+                        // Échec fonctionnel (Assert.assertTrue a échoué)
+                        this.nbEchecs++;
+                        System.out.print("E");
+                        erreurs.add(cause);
+                    } else {
+                        // Erreur inattendue (exception levée dans le test)
+                        this.nbErreurs++;
+                        System.out.print("X");
+                        erreurs.add(cause);
+                    }
+                } catch (Exception e) {
+                    this.nbErreurs++;
+                    System.out.print("X");
+                    erreurs.add(e);
+                } finally {
+                    // 3. Appeler nettoyer (si elle existe), même en cas d'erreur
+                    if (nettoyer != null) {
+                        try {
+                            nettoyer.invoke(objet);
+                        } catch (Exception e) {
+                            // on ignore les erreurs de nettoyage
+                        }
+                    }
+                }
+            }
+        }
 	}
 
 	public static void main(String... args) {
