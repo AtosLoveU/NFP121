@@ -1,4 +1,4 @@
-Date de l'évaluation : ven. 03 avril 2026 14:20:44 CEST
+Date de l'évaluation : mar. 26 mai 2026 12:02:15 CEST
 
 Nombre de similitudes : 1	(voir evaluation1/sim_java.txt)
 Les similitudes indiquent généralement du code à restructurer.
@@ -54,7 +54,15 @@ Test exempleMaxLou : ok
 Test exempleRapideRapide : ok
 Test exempleTricheurExpert : ok
 
-Test RobustesseTest : Ne termine pas ==> interrompu !	(voir evaluation1/RobustesseTest.txt)
+Test RobustesseTest : Tests run: 24,  Failures: 4	(voir evaluation1/RobustesseTest.txt)
+    1) testerNomNonDefini(RobustesseTest)
+        Le programme ne se termine pas.
+    2) testerNomNonDefiniConfiant(RobustesseTest)
+        Le programme ne se termine pas.
+    3) testerNomNonDefiniSymetrieConfiant(RobustesseTest)
+        Le programme ne se termine pas.
+    4) testerNomNonDefiniSymetrie(RobustesseTest)
+        Le programme ne se termine pas.
 
 
 On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
