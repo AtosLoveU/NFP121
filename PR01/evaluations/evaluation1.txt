@@ -1,4 +1,4 @@
-Date de l'évaluation : ven. 03 avril 2026 14:19:53 CEST
+Date de l'évaluation : mar. 26 mai 2026 12:01:54 CEST
 
 Compilation de Cercle.java : OK.
 
@@ -8,16 +8,37 @@ Résultat de recherche de similitudes sur Cercle.java dans evaluation1/Cercle.si
 
 JavaDoc automatique de Cercle : ok
 
-Test SujetCercleTest : OK (14 tests)	(voir evaluation1/SujetCercleTest.txt)
-Test RobustesseCercleTest : OK (20 tests)	(voir evaluation1/RobustesseCercleTest.txt)
-Test FormeCercleTest : OK (12 tests)	(voir evaluation1/FormeCercleTest.txt)
-Test Forme2CercleTest : OK (9 tests)	(voir evaluation1/Forme2CercleTest.txt)
+Test SujetCercleTest : Le test ne se termine pas !	(voir evaluation1/SujetCercleTest.txt)
+        Error occurred during initialization of VM
+        Error: A command line option has attempted to allow or enable the Security Manager. Enabling a Security Manager is not supported.
+
+Test SujetCercleTest : Le test ne se termine pas !	(voir evaluation1/SujetCercleTest.txt)
+        Error occurred during initialization of VM
+        Error: A command line option has attempted to allow or enable the Security Manager. Enabling a Security Manager is not supported.
+
+Test RobustesseCercleTest : Le test ne se termine pas !	(voir evaluation1/RobustesseCercleTest.txt)
+        Error occurred during initialization of VM
+        Error: A command line option has attempted to allow or enable the Security Manager. Enabling a Security Manager is not supported.
+
+Test FormeCercleTest : Le test ne se termine pas !	(voir evaluation1/FormeCercleTest.txt)
+        Error occurred during initialization of VM
+        Error: A command line option has attempted to allow or enable the Security Manager. Enabling a Security Manager is not supported.
+
+Test Forme2CercleTest : Le test ne se termine pas !	(voir evaluation1/Forme2CercleTest.txt)
+        Error occurred during initialization of VM
+        Error: A command line option has attempted to allow or enable the Security Manager. Enabling a Security Manager is not supported.
+
 
 ComplementsCercleTest : modifiée... on l'utilise donc...
 Compilation de ComplementsCercleTest.java : OK.
-Test ComplementsCercleTest : OK (14 tests)	(voir evaluation1/ComplementsCercleTest.txt)
+Test ComplementsCercleTest : Le test ne se termine pas !	(voir evaluation1/ComplementsCercleTest.txt)
+        Error occurred during initialization of VM
+        Error: A command line option has attempted to allow or enable the Security Manager. Enabling a Security Manager is not supported.
+
 
 Compilation de CercleTest.java : OK.
-Test CercleTest : OK (13 tests)	(voir evaluation1/CercleTest.txt)
-Test de CercleTest avec CercleMini : ERREUR : CercleTest aurait dû réussir !	(voir evaluation1/CercleMini.txt pour les erreurs signalées)
-CercleTest échoue sur CercleMini : les mutants ne sont pas testés
+Test CercleTest : Le test ne se termine pas !	(voir evaluation1/CercleTest.txt)
+        Error occurred during initialization of VM
+        Error: A command line option has attempted to allow or enable the Security Manager. Enabling a Security Manager is not supported.
+
+CercleTest échoue sur Cercle : pas de test avec les mutants
