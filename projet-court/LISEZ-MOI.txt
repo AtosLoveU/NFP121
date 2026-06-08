@@ -17,7 +17,7 @@ Il faut remplacer les ... par des nombres.
 
 
 * Temps passé sur la V1 :  3 heures 30 minutes
-* Temps passé sur la V2 : ... heures ... minutes
+* Temps passé sur la V2 :  2 heures 00 minutes
 
 Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
 

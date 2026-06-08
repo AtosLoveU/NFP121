@@ -1,0 +1,10 @@
+<!ELEMENT deroulement (coup*, resultat)>
+<!ELEMENT coup EMPTY>
+<!ATTLIST coup
+    numero     CDATA #REQUIRED
+    joueur     CDATA #REQUIRED
+    allumettes CDATA #REQUIRED>
+<!ELEMENT resultat EMPTY>
+<!ATTLIST resultat
+    gagnant  CDATA #IMPLIED
+    tricheur CDATA #IMPLIED>
