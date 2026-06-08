@@ -1,9 +1,9 @@
-Date de l'évaluation : mar. 26 mai 2026 12:02:15 CEST
+Date de l'évaluation : lun. 08 juin 2026 10:43:24 CEST
 
 Nombre de similitudes : 1	(voir evaluation1/sim_java.txt)
 Les similitudes indiquent généralement du code à restructurer.
 
-Erreurs checkstyle (différentes/types) : 9/5	(voir evaluation1//checkstyle.txt)
+Erreurs checkstyle (différentes/types) : 8/4	(voir evaluation1//checkstyle.txt)
 
 Classe OperationInterditeException : OperationInterditeException (ok)
 
@@ -19,18 +19,18 @@ AssertionError ne doit pas être récupérée... ok
 Autres exceptions récupérées :
   | allumettes/Arbitre.java:45:            } catch (CoupInvalideException e) {
   | allumettes/StrategieHumain.java:26:                } catch (CoupInvalideException e) {
-  | allumettes/Jouer.java:32:        } catch (ConfigurationException e) {
+  | allumettes/Jouer.java:34:        } catch (ConfigurationException e) {
   | allumettes/StrategieTricheur.java:10:            } catch (CoupInvalideException e) {
 
 Utilisation de 'Scanner' : ok
   | allumettes/StrategieHumain.java:6:    private Scanner scanner;
   | allumettes/StrategieHumain.java:8:    public StrategieHumain(String nom, Scanner scanner) {
-  | allumettes/Jouer.java:20:            Scanner scanner = new Scanner(System.in);
-  | allumettes/Jouer.java:40:   private static Joueur creerJoueur(String description, Scanner scanner) {
-  | allumettes/Jouer.java:51:   private static Strategie creerStrategie(String nom, String joueurNom, Scanner scanner) {
+  | allumettes/Jouer.java:22:            Scanner scanner = new Scanner(System.in);
+  | allumettes/Jouer.java:42:   private static Joueur creerJoueur(String description, Scanner scanner) {
+  | allumettes/Jouer.java:56:   private static Strategie creerStrategie(String nom, String joueurNom, Scanner scanner) {
 
 Utilisation de 'split' : ok
-  | allumettes/Jouer.java:41:        String[] parties = description.split("@");
+  | allumettes/Jouer.java:43:        String[] parties = description.split("@");
 
 Utilisation de 'Random' : ok
   | allumettes/StrategieNaif.java:2:import java.util.Random;
@@ -54,16 +54,7 @@ Test exempleMaxLou : ok
 Test exempleRapideRapide : ok
 Test exempleTricheurExpert : ok
 
-Test RobustesseTest : Tests run: 24,  Failures: 4	(voir evaluation1/RobustesseTest.txt)
-    1) testerNomNonDefini(RobustesseTest)
-        Le programme ne se termine pas.
-    2) testerNomNonDefiniConfiant(RobustesseTest)
-        Le programme ne se termine pas.
-    3) testerNomNonDefiniSymetrieConfiant(RobustesseTest)
-        Le programme ne se termine pas.
-    4) testerNomNonDefiniSymetrie(RobustesseTest)
-        Le programme ne se termine pas.
-
+Test RobustesseTest : OK (24 tests)	(voir evaluation1/RobustesseTest.txt)
 
 On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
 Test exemplePresqueSujet : ok
@@ -73,10 +64,7 @@ Test FormeC7Test : OK (1 test)	(voir evaluation1/FormeC7Test.txt)
 Test FormeC9Test : OK (1 test)	(voir evaluation1/FormeC9Test.txt)
 Test FormeC14Test : OK (1 test)	(voir evaluation1/FormeC14Test.txt)
 Test FormeExceptionsTest : OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
-Test FormeProxyTest : Tests run: 2,  Failures: 1	(voir evaluation1/FormeProxyTest.txt)
-    1) testerProcuration(FormeProxyTest)
-        allumettes.Procuration.retirer : Est-il logique qu'elle dise pouvoir propager CoupInvalideException ?
-
+Test FormeProxyTest : OK (2 tests)	(voir evaluation1/FormeProxyTest.txt)
 
 Compilation de StrategieRapideTest.java : OK.
 Test allumettes.StrategieRapideTest : OK (4 tests)	(voir evaluation1/allumettes.StrategieRapideTest.txt)

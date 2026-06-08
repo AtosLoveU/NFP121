@@ -5,15 +5,15 @@ File allumettes/OperationInterditeException.java: 21 tokens, 7 lines (not NL-ter
 File allumettes/StrategieHumain.java: 153 tokens, 36 lines (not NL-terminated)
 File allumettes/StrategieRapide.java: 33 tokens, 7 lines (not NL-terminated)
 File allumettes/ConfigurationException.java: 21 tokens, 16 lines
-File allumettes/Jouer.java: 399 tokens, 88 lines
+File allumettes/Jouer.java: 427 tokens, 93 lines
 File allumettes/Jeu.java: 23 tokens, 21 lines
 File allumettes/StrategieExpert.java: 51 tokens, 9 lines (not NL-terminated)
 File allumettes/JeuImpl.java: 106 tokens, 22 lines (not NL-terminated)
-File allumettes/Procuration.java: 68 tokens, 15 lines (not NL-terminated)
+File allumettes/Procuration.java: 66 tokens, 15 lines (not NL-terminated)
 File allumettes/StrategieNaif.java: 37 tokens, 10 lines (not NL-terminated)
 File allumettes/Strategie.java: 13 tokens, 5 lines (not NL-terminated)
 File allumettes/StrategieTricheur.java: 91 tokens, 17 lines (not NL-terminated)
-Total input: 15 files (15 new, 0 old), 1462 tokens
+Total input: 15 files (15 new, 0 old), 1488 tokens
 
 allumettes/Joueur.java: line 3-10 [29]
 allumettes/StrategieHumain.java: line 4-11
