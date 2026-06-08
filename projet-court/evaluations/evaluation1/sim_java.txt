@@ -6,16 +6,50 @@ File allumettes/OperationInterditeException.java: 21 tokens, 7 lines (not NL-ter
 File allumettes/StrategieHumain.java: 153 tokens, 36 lines (not NL-terminated)
 File allumettes/StrategieRapide.java: 33 tokens, 7 lines (not NL-terminated)
 File allumettes/ConfigurationException.java: 21 tokens, 16 lines
-File allumettes/Jouer.java: 435 tokens, 94 lines
+File allumettes/Jouer.java: 444 tokens, 95 lines
 File allumettes/Jeu.java: 23 tokens, 21 lines
 File allumettes/StrategieSuperTricheur.java: 169 tokens, 40 lines (not NL-terminated)
+File allumettes/FenetreJoueur.java: 455 tokens, 109 lines (not NL-terminated)
 File allumettes/StrategieExpert.java: 51 tokens, 9 lines (not NL-terminated)
 File allumettes/JeuImpl.java: 106 tokens, 22 lines (not NL-terminated)
 File allumettes/Procuration.java: 66 tokens, 15 lines (not NL-terminated)
 File allumettes/StrategieNaif.java: 37 tokens, 10 lines (not NL-terminated)
 File allumettes/Strategie.java: 13 tokens, 5 lines (not NL-terminated)
 File allumettes/StrategieTricheur.java: 91 tokens, 17 lines (not NL-terminated)
-Total input: 17 files (17 new, 0 old), 2076 tokens
+File allumettes/StrategieSwing.java: 356 tokens, 80 lines (not NL-terminated)
+Total input: 19 files (19 new, 0 old), 2896 tokens
+
+allumettes/StrategieSuperTricheur.java: line 14-27 [59]
+allumettes/StrategieSwing.java: line 45-58
+<     }
+< 
+<     private Jeu extraireJeuReel(Jeu jeu) {
+<         if (jeu instanceof Procuration) {
+<             try {
+<                 Field champ = Procuration.class.getDeclaredField("jeuReel");
+<                 champ.setAccessible(true);
+<                 return (Jeu) champ.get(jeu);
+<             } catch (NoSuchFieldException | IllegalAccessException e) {
+<                 // Ne devrait pas arriver
+<             }
+<         }
+<         return jeu;
+<     }
+---
+>     }
+> 
+>     private Jeu extraireJeuReel(Jeu jeu) {
+>         if (jeu instanceof Procuration) {
+>             try {
+>                 Field champ = Procuration.class.getDeclaredField("jeuReel");
+>                 champ.setAccessible(true);
+>                 return (Jeu) champ.get(jeu);
+>             } catch (NoSuchFieldException | IllegalAccessException e) {
+>                 // Ne devrait pas arriver
+>             }
+>         }
+>         return jeu;
+>     }
 
 allumettes/StrategieSuperTricheur.java: line 30-38 [47]
 allumettes/StrategieTricheur.java: line 6-13
@@ -57,6 +91,37 @@ allumettes/StrategieHumain.java: line 4-11
 >         this.nom = nom;
 >         this.scanner = scanner;
 >     }
+
+allumettes/StrategieTricheur.java: line 7-13 [27]
+allumettes/StrategieSwing.java: line 61-68
+<             int aRetirer = Math.min(Jeu.PRISE_MAX, jeu.getNombreAllumettes() - 2);
+<             try {
+<                 jeu.retirer(aRetirer); // Lance OperationInterditeException si proxy
+<             } catch (CoupInvalideException e) {
+<                 // Ne devrait pas arriver
+<             }
+<         }
+---
+>         int aRetirer = Math.min(nbATricher,
+>             jeuReel.getNombreAllumettes() - 1);
+>         try {
+>             jeuReel.retirer(aRetirer);
+>         } catch (CoupInvalideException e) {
+>             // Ne devrait pas arriver
+>         }
+>     }
+
+allumettes/Jouer.java: line 58-61 [24]
+allumettes/Jouer.java: line 61-64
+<             case "rapide":  return new StrategieRapide();
+<             case "naif":    return new StrategieNaif();
+<             case "expert":  return new StrategieExpert();
+<             case "humain":  return new StrategieHumain(joueurNom, scanner);
+---
+>             case "humain":  return new StrategieHumain(joueurNom, scanner);
+>             case "tricheur": return new StrategieTricheur();
+>             case "supertricheur": return new StrategieSuperTricheur();
+>             case "swing": return new StrategieSwing(joueurNom);
 
 allumettes/StrategieSuperTricheur.java: line 1-8 [24]
 allumettes/StrategieTricheur.java: line 1-5
