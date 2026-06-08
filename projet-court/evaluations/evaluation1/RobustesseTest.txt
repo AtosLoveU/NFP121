@@ -9,7 +9,7 @@ Erreur : Format invalide : x
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -28,7 +28,7 @@ Erreur : Format invalide : xxx@rapide@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -47,7 +47,7 @@ Erreur : Format invalide : x
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -66,7 +66,7 @@ Erreur : Strategie inconnue : xyz
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -85,7 +85,7 @@ Erreur : Format invalide : xxx@ville@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -104,7 +104,7 @@ Erreur : Nom vide dans : @humain
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -123,7 +123,7 @@ Erreur : Strategie inconnue : xyz
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -142,7 +142,7 @@ Erreur : Format invalide : xxx@rapide@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -161,7 +161,7 @@ Erreur : Format invalide : xxx@ville@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -180,7 +180,7 @@ Erreur : Strategie inconnue : xyz
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -199,7 +199,7 @@ Erreur : Nom vide dans : @humain
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -218,7 +218,7 @@ Erreur : Format invalide : xxx@rapide@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -237,7 +237,7 @@ Erreur : Trop peu d'arguments : 1
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -256,7 +256,7 @@ Erreur : Format invalide : xxx@ville@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -275,7 +275,7 @@ Erreur : Format invalide : xxx@ville@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -294,7 +294,7 @@ Erreur : Format invalide : x
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -313,7 +313,7 @@ Erreur : Format invalide : -confiant
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -332,7 +332,7 @@ Erreur : Trop peu d'arguments : 0
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -351,7 +351,7 @@ Erreur : Format invalide : x
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -370,7 +370,7 @@ Erreur : Strategie inconnue : xyz
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -389,7 +389,7 @@ Erreur : Nom vide dans : @humain
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -408,7 +408,7 @@ Erreur : Format invalide : xxx@rapide@naif
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -427,7 +427,7 @@ Erreur : Trop peu d'arguments : 1
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -446,7 +446,7 @@ Erreur : Nom vide dans : @humain
 Usage :
 	java allumettes.Jouer joueur1 joueur2
 		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur
+		strategie = naif | rapide | expert | humain | tricheur | supertricheur
 
 	Exemple :
 		java allumettes.Jouer Xavier@humain Ordinateur@naif
@@ -457,7 +457,7 @@ Usage :
 
 
 
-Time: 3,779
+Time: 3,089
 
 OK (24 tests)
 

@@ -1,9 +1,9 @@
-Date de l'évaluation : lun. 08 juin 2026 10:43:24 CEST
+Date de l'évaluation : lun. 08 juin 2026 11:46:41 CEST
 
-Nombre de similitudes : 1	(voir evaluation1/sim_java.txt)
+Nombre de similitudes : 3	(voir evaluation1/sim_java.txt)
 Les similitudes indiquent généralement du code à restructurer.
 
-Erreurs checkstyle (différentes/types) : 8/4	(voir evaluation1//checkstyle.txt)
+Erreurs checkstyle (différentes/types) : 9/4	(voir evaluation1//checkstyle.txt)
 
 Classe OperationInterditeException : OperationInterditeException (ok)
 
@@ -17,9 +17,12 @@ Throwable, Exception et RuntimeException ne devraient pas être récupérées ca
 AssertionError ne doit pas être récupérée... ok
 
 Autres exceptions récupérées :
-  | allumettes/Arbitre.java:45:            } catch (CoupInvalideException e) {
+  | allumettes/Arbitre.java:53:            } catch (CoupInvalideException e) {
+  | allumettes/GenerateurXML.java:23:        } catch (IOException e) {
   | allumettes/StrategieHumain.java:26:                } catch (CoupInvalideException e) {
   | allumettes/Jouer.java:34:        } catch (ConfigurationException e) {
+  | allumettes/StrategieSuperTricheur.java:22:            } catch (NoSuchFieldException | IllegalAccessException e) {
+  | allumettes/StrategieSuperTricheur.java:35:            } catch (CoupInvalideException e) {
   | allumettes/StrategieTricheur.java:10:            } catch (CoupInvalideException e) {
 
 Utilisation de 'Scanner' : ok
