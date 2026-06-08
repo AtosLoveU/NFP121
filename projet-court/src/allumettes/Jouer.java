@@ -61,6 +61,7 @@ public class Jouer {
             case "humain":  return new StrategieHumain(joueurNom, scanner);
             case "tricheur": return new StrategieTricheur();
             case "supertricheur": return new StrategieSuperTricheur();
+            case "swing": return new StrategieSwing(joueurNom);
             default: throw new ConfigurationException("Strategie inconnue : " + nom);
         }
     }
@@ -82,7 +83,7 @@ public class Jouer {
 		System.out.println("\n" + "Usage :"
 				+ "\n\t" + "java allumettes.Jouer joueur1 joueur2"
 				+ "\n\t\t" + "joueur est de la forme nom@stratégie"
-				+ "\n\t\t" + "strategie = naif | rapide | expert | humain | tricheur | supertricheur"
+				+ "\n\t\t" + "strategie = naif | rapide | expert | humain | tricheur | supertricheur | swing"
 				+ "\n"
 				+ "\n\t" + "Exemple :"
 				+ "\n\t" + "	java allumettes.Jouer Xavier@humain "
