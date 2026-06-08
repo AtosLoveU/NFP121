@@ -1,19 +1,42 @@
-File allumettes/Arbitre.java: 319 tokens, 60 lines (not NL-terminated)
+File allumettes/Arbitre.java: 455 tokens, 77 lines (not NL-terminated)
 File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
 File allumettes/Joueur.java: 59 tokens, 15 lines (not NL-terminated)
+File allumettes/GenerateurXML.java: 275 tokens, 55 lines (not NL-terminated)
 File allumettes/OperationInterditeException.java: 21 tokens, 7 lines (not NL-terminated)
 File allumettes/StrategieHumain.java: 153 tokens, 36 lines (not NL-terminated)
 File allumettes/StrategieRapide.java: 33 tokens, 7 lines (not NL-terminated)
 File allumettes/ConfigurationException.java: 21 tokens, 16 lines
-File allumettes/Jouer.java: 427 tokens, 93 lines
+File allumettes/Jouer.java: 435 tokens, 94 lines
 File allumettes/Jeu.java: 23 tokens, 21 lines
+File allumettes/StrategieSuperTricheur.java: 169 tokens, 40 lines (not NL-terminated)
 File allumettes/StrategieExpert.java: 51 tokens, 9 lines (not NL-terminated)
 File allumettes/JeuImpl.java: 106 tokens, 22 lines (not NL-terminated)
 File allumettes/Procuration.java: 66 tokens, 15 lines (not NL-terminated)
 File allumettes/StrategieNaif.java: 37 tokens, 10 lines (not NL-terminated)
 File allumettes/Strategie.java: 13 tokens, 5 lines (not NL-terminated)
 File allumettes/StrategieTricheur.java: 91 tokens, 17 lines (not NL-terminated)
-Total input: 15 files (15 new, 0 old), 1488 tokens
+Total input: 17 files (17 new, 0 old), 2076 tokens
+
+allumettes/StrategieSuperTricheur.java: line 30-38 [47]
+allumettes/StrategieTricheur.java: line 6-13
+<         while (jeuReel.getNombreAllumettes() > 2) {
+<             int aRetirer = Math.min(Jeu.PRISE_MAX,
+<                 jeuReel.getNombreAllumettes() - 2);
+<             try {
+<                 jeuReel.retirer(aRetirer);
+<             } catch (CoupInvalideException e) {
+<                 // Ne devrait pas arriver
+<             }
+<         }
+---
+>         while (jeu.getNombreAllumettes() > 2) {
+>             int aRetirer = Math.min(Jeu.PRISE_MAX, jeu.getNombreAllumettes() - 2);
+>             try {
+>                 jeu.retirer(aRetirer); // Lance OperationInterditeException si proxy
+>             } catch (CoupInvalideException e) {
+>                 // Ne devrait pas arriver
+>             }
+>         }
 
 allumettes/Joueur.java: line 3-10 [29]
 allumettes/StrategieHumain.java: line 4-11
@@ -34,4 +57,21 @@ allumettes/StrategieHumain.java: line 4-11
 >         this.nom = nom;
 >         this.scanner = scanner;
 >     }
+
+allumettes/StrategieSuperTricheur.java: line 1-8 [24]
+allumettes/StrategieTricheur.java: line 1-5
+< package allumettes;
+< 
+< import java.lang.reflect.Field;
+< 
+< public class StrategieSuperTricheur implements Strategie {
+< 
+<     public int getPrise(Jeu jeu) {
+<         System.out.println("[Je triche...]");
+---
+> package allumettes;
+> 
+> public class StrategieTricheur implements Strategie {
+>     public int getPrise(Jeu jeu) {
+>         System.out.println("[Je triche...]");
 
