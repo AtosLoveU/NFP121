@@ -10,6 +10,8 @@ import java.util.Scanner;
  */
 public class Jouer {
 
+    private static final int NB_ALLUMETTES = 13;
+
 	/** Lancer une partie. En argument sont donnés les deux joueurs sous
 	 * la forme nom@stratégie.
 	 * @param args la description des deux joueurs
@@ -26,7 +28,7 @@ public class Jouer {
             Joueur j2 = creerJoueur(args[debut + 1], scanner);
 
             Arbitre arbitre = new Arbitre(j1, j2, confiant);
-            Jeu jeu = new JeuImpl(13);
+            Jeu jeu = new JeuImpl(NB_ALLUMETTES);
             arbitre.arbitrer(jeu);
 
         } catch (ConfigurationException e) {
@@ -39,6 +41,9 @@ public class Jouer {
 
 	private static Joueur creerJoueur(String description, Scanner scanner) {
         String[] parties = description.split("@");
+        if (parties[0].isEmpty()) {
+            throw new ConfigurationException("Nom vide dans : " + description);
+        }
         if (parties.length != 2) {
             throw new ConfigurationException("Format invalide : " + description);
         }

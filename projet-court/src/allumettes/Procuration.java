@@ -9,7 +9,7 @@ public class Procuration implements Jeu {
 
     public String toString() { return jeuReel.toString(); }
 
-    public void retirer(int n) throws CoupInvalideException {
+    public void retirer(int n) {
         throw new OperationInterditeException("retirer interdite par la procuration");
     }
 }
