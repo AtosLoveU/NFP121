@@ -1,0 +1,13 @@
+Les Q# font référence aux questions posées dans le fichier LISEZ-MOI.txt.
+Les pénalités '+' sont évaluées manuellement (enseignant de TP).
+Les pénalités '+' peuvent donner lieu à des pénalités définitives en V1 (si le travail est jugé insuffisant).
+
++ Autres aspects fonctionnels :
+    + OperationInterditeException est récupérée trop tôt
+
++ Autres remarques
+    - Pour la génération XML, il faudrait passer par JDOM (ou DOM).  Pas une
+      bonne idée de le faire à la main...
+
++ Correction sur les pénalités automatiques : 0
+
